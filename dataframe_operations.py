@@ -59,7 +59,6 @@ def create_union_of_dataframes(file_path: list[str]) -> pl.DataFrame | None:
         if df is not None:
             dfs.append(df)
     if dfs:
-        print(pl.concat(dfs))        
         return pl.concat(dfs)
     else:
         print("No valid JSON files found.")
