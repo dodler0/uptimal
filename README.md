@@ -1,2 +1,53 @@
-# uptimal
-uptimal repo
+# Uptimal - Data Enrichment Pipeline
+
+This project demonstrates a data pipeline that fetches motor vehicle collision data for New York City and enriches it with US public holiday information. It identifies which collisions occurred on a holiday, providing a dataset ready for further analysis.
+
+## Features
+
+- **Data Fetching**: Downloads collision data from NYC Open Data and public holiday data from the Nager.Date API.
+- **Dynamic Year Detection**: Automatically detects the years present in the collision data to fetch the correct holiday information.
+- **Efficient Caching**: Caches downloaded files locally to avoid redundant network requests on subsequent runs.
+- **High-Performance Processing**: Uses the [Polars](https://pola.rs/) DataFrame library for fast and memory-efficient data manipulation.
+- **Data Enrichment**: Joins the collision and holiday datasets, adding a boolean `IS_HOLIDAY` flag to each crash record for easy filtering and analysis.
+
+## Requirements
+
+- Python 3.9+
+- PDM (Python Dependency Manager)
+
+The project dependencies are managed by PDM and are listed in `pyproject.toml`. The key libraries are:
+- `polars`
+- `requests`
+
+## Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone <your-repo-url>
+    cd uptimal
+    ```
+
+2.  **Install dependencies using PDM:**
+    (If you don't have PDM, install it first: `pip install pdm`)
+    ```bash
+    pdm install
+    ```
+
+## Usage
+
+To run the entire data pipeline, execute the main script from the root of the project:
+
+```bash
+pdm run python main.py
+```
+
+The script will:
+1.  Create `collisions/` and `holidays/` directories if they don't exist.
+2.  Download the necessary CSV and JSON files into these directories.
+3.  Process the data using Polars.
+4.  Print a summary of the enrichment process, including the number of crashes that occurred on a holiday.
+
+## Data Sources
+
+- **Motor Vehicle Collisions**: Provided by NYC Open Data.
+- **Public Holidays**: Provided by the Nager.Date API.
