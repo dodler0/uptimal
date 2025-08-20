@@ -23,12 +23,12 @@ The project dependencies are managed by PDM and are listed in `pyproject.toml`. 
 
 1.  **Clone the repository:**
     ```bash
-    git clone <your-repo-url>
+    git clone <this-repo-url>
     cd uptimal
     ```
 
 2.  **Install dependencies using PDM:**
-    (If you don't have PDM, install it first: `pip install pdm`)
+    (If you don't have PDM, install it first: `pip install pdm` or `brew install pdm` for macOS`)
     ```bash
     pdm install
     ```
