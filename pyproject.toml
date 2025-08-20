@@ -3,9 +3,9 @@ name = "uptimal"
 version = "0.1.0"
 description = "Default template for PDM package"
 authors = [
-    {name = "David Odler", email = ""},
+    {name = "David Odler", email = "xdejvx@live.com"},
 ]
-dependencies = ["requests>=2.32.4", "polars>=1.32.2"]
+dependencies = ["requests>=2.32.4", "polars>=1.32.2", "matplotlib>=3.9.0", "seaborn>=0.13.2", "ipykernel>=6.30.1", "pyarrow>=21.0.0"]
 requires-python = "==3.13.*"
 readme = "README.md"
 license = {text = "MIT"}

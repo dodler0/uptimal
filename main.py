@@ -57,18 +57,6 @@ if __name__ == "__main__":
         # This is True if the 'name' column (from holidays_df) is not null.
         enriched_df = enriched_df.with_columns(
             pl.col("name").is_not_null().alias("IS_HOLIDAY")
-        )
-        
-        print("Enrichment complete.")
-        
-        # Let's verify by counting crashes on holidays vs. non-holidays.
-        print("\nCrash distribution (Holiday vs. Non-Holiday):")
-        print(enriched_df.get_column("IS_HOLIDAY").value_counts())
-
-        # Show the first 5 crashes that occurred on holidays using the new column.
-        crashes_on_holidays = enriched_df.filter(pl.col("IS_HOLIDAY"))
-        print(f"\nFound {len(crashes_on_holidays)} crashes that occurred on a public holiday.")
-        print("Showing the first 5 crashes that occurred on holidays (with the new 'IS_HOLIDAY' column):")
-        print(crashes_on_holidays.head())
+        )        
     
         enriched_df.write_parquet("crashes.parquet")
