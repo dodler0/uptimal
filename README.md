@@ -60,11 +60,8 @@ The project includes a Jupyter Notebook, `analysis.ipynb`, for exploratory data 
 ### Running the Analysis
 
 1.  Ensure you have installed the project dependencies by running `pdm install`. This includes libraries for analysis and visualization like `matplotlib`, `seaborn`, and `pyarrow`.
-2.  Launch Jupyter Lab from your terminal:
-    ```bash
-    pdm run jupyter lab
-    ```
-3.  Open `analysis.ipynb` and run the cells to see the analysis.
+
+2.  Open `analysis.ipynb` and run the cells to see the analysis.
 
 ### Notebook Content
 - A comparison of total crashes on holidays versus non-holidays.
