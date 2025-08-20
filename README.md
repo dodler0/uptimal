@@ -53,6 +53,10 @@ The script generates a single output file in the project's root directory:
 
 - **`crashes.parquet`**: A Parquet file containing all the original collision data, enriched with holiday information. It includes an `IS_HOLIDAY` boolean column for easy analysis.
 
+IMPORTANT NOTE:
+Please, be sure to run the python script so that the `crashes.parquet` file is generated.
+The data analysis part would not go through eventually.
+
 ## Data Analysis
 
 The project includes a Jupyter Notebook, `analysis.ipynb`, for exploratory data analysis of the final `crashes.parquet` file.
