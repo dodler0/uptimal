@@ -47,6 +47,12 @@ The script will:
 3.  Process the data using Polars.
 4.  Print a summary of the enrichment process, including the number of crashes that occurred on a holiday.
 
+## Output
+
+The script generates a single output file in the project's root directory:
+
+- **`crashes.parquet`**: A Parquet file containing all the original collision data, enriched with holiday information. It includes an `IS_HOLIDAY` boolean column for easy analysis.
+
 ## Data Sources
 
 - **Motor Vehicle Collisions**: Provided by NYC Open Data.
