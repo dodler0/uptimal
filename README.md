@@ -53,6 +53,23 @@ The script generates a single output file in the project's root directory:
 
 - **`crashes.parquet`**: A Parquet file containing all the original collision data, enriched with holiday information. It includes an `IS_HOLIDAY` boolean column for easy analysis.
 
+## Data Analysis
+
+The project includes a Jupyter Notebook, `analysis.ipynb`, for exploratory data analysis of the final `crashes.parquet` file.
+
+### Running the Analysis
+
+1.  Ensure you have installed the project dependencies by running `pdm install`. This includes libraries for analysis and visualization like `matplotlib`, `seaborn`, and `pyarrow`.
+2.  Launch Jupyter Lab from your terminal:
+    ```bash
+    pdm run jupyter lab
+    ```
+3.  Open `analysis.ipynb` and run the cells to see the analysis.
+
+### Notebook Content
+- A comparison of total crashes on holidays versus non-holidays.
+- A breakdown of the holidays with the highest number of crashes, aggregated across all years.
+
 ## Data Sources
 
 - **Motor Vehicle Collisions**: Provided by NYC Open Data.
