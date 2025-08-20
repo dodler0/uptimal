@@ -70,3 +70,5 @@ if __name__ == "__main__":
         print(f"\nFound {len(crashes_on_holidays)} crashes that occurred on a public holiday.")
         print("Showing the first 5 crashes that occurred on holidays (with the new 'IS_HOLIDAY' column):")
         print(crashes_on_holidays.head())
+    
+        enriched_df.write_parquet("crashes.parquet")
